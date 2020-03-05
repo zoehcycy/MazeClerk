@@ -1,0 +1,61 @@
+Mouse ID,Genotype,Gender,Line,TgSWDI,Genotype 2,Genotype 3,Father,Mother,DOB,Age (wks),Set up,Birth status,Estimated Delivery Date,Delivery Date,Ween,Male Status,Breeding Status,Maze Configuration,Treatment Group,Virus Implantation,Experimental Status
+170,Tg-SwDI,M,Tg-SwDI,Pos,,,Tg-SwDI (116),Tg-SwDI (117),8/2/2019,30.86,,,,,,,,ABFG,--,--,Testing
+171,Tg-SwDI,M,Tg-SwDI,Pos,,,Tg-SwDI (116),Tg-SwDI (117),8/2/2019,30.86,,,,,,,,ABFG,--,--,Testing
+224,Tg-SwDI,M,Tg-SwDI x ThCre,Pos,Neg,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,ABFG,--,--,Testing
+225,Tg-SwDI,M,Tg-SwDI x ThCre,Pos,Neg,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,ABFG,--,--,Testing
+233,Tg-SwDI,M,Tg-SwDI x ThCre,Pos,Neg,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,ABFG,--,--,Testing
+172,Tg-SwDI,F,,Pos,,,Tg-SwDI (116),Tg-SwDI (117),8/2/2019,30.86,,,,,,,,BCEG,--,--,Testing
+173,Tg-SwDI,F,Tg-SwDI,Pos,,,Tg-SwDI (116),Tg-SwDI (117),8/2/2019,30.86,,,,,,,,BCEG,--,--,Testing
+174,Tg-SwDI,F,Tg-SwDI,Pos,,,Tg-SwDI (116),Tg-SwDI (117),8/2/2019,30.86,,,,,,,,BCEG,--,--,Testing
+175,Tg-SwDI,F,Tg-SwDI,Pos,,,Tg-SwDI (116),Tg-SwDI (117),8/2/2019,30.86,,,,,,,,BCEG,--,--,Testing
+231,Tg-SwDI,F,Tg-SwDI,Pos,,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,BCEG,--,--,Testing
+254,Tg-SwDI,M,Tg-SwDI x ThCre,Pos,Neg,,Tg-SwDI(116),ThCre(71/99),10/2/2019,22.14,,,,,,,,BDFH,MAMP,--,Testing
+255,Tg-SwDI,M,Tg-SwDI x ThCre,Pos,Neg,,Tg-SwDI(116),ThCre(71/99),10/2/2019,22.14,,,,,,,,BDFH,MAMP,--,Testing
+260,Tg-SwDI,M,Tg-SwDI x ThCre,Pos,Neg,,Tg-SwDI(116),ThCre(210/211),10/21/2019,19.43,,,,,,,,BDFH,MAMP,--,Testing
+261,Tg-SwDI,M,Tg-SwDI x ThCre,Pos,Neg,,Tg-SwDI(116),ThCre(210/211),10/21/2019,19.43,,,,,,,,BDFH,MAMP,--,Testing
+282,Tg-SwDI,F,Tg-SwDI,Pos,,,Tg-SwDI(116),117,10/29/2019,18.29,,,,,,,,ACDF,MAMP,--,Testing
+284,Tg-SwDI,F,Tg-SwDI,Pos,,,Tg-SwDI(116),117,9/15/2019,24.57,,,,,,,,ACDF,MAMP,--,Testing
+285,Tg-SwDI,F,Tg-SwDI,Pos,,,Tg-SwDI(116),117,9/15/2019,24.57,,,,,,,,ACDF,MAMP,--,Testing
+286,Tg-SwDI,F,Tg-SwDI,Pos,,,Tg-SwDI(116),117,9/15/2019,24.57,,,,,,,,ACDF,MAMP,--,Testing
+177,Tg-SwDI x ThCre,M,Tg-SwDI x (ThCre x ChR),Pos,Pos,Neg,Tg-SwDI (116),ThCre x ChR (89),7/7/2019,34.57,,,,,,,,ACDF,High Dose CNO,1/14/2020,Testing
+178,Tg-SwDI x ThCre,M,Tg-SwDI x (ThCre x ChR),Pos,Pos,Neg,Tg-SwDI (116),ThCre x ChR (89),7/7/2019,34.57,,,,,,,,ACDF,High Dose CNO,1/14/2020,Testing
+221,Tg-SwDI x ThCre,M,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,ACDF,High Dose CNO,2/22/2020,
+234,Tg-SwDI x ThCre,M,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,ACDF,High Dose CNO,2/22/2020,
+181,Tg-SwDI x ThCre,F,Tg-SwDI x (ThCre x ChR),Pos,Pos,Neg,Tg-SwDI (116),ThCre x ChR (89),7/7/2019,34.57,,,,,,,,BDFH,High Dose CNO,1/3/2020,Testing
+182,Tg-SwDI x ThCre,F,Tg-SwDI x (ThCre x ChR),Pos,Pos,Neg,Tg-SwDI (116),ThCre x ChR (89),7/7/2019,34.57,,,,,,,,BDFH,High Dose CNO,12/30/2019,Testing
+228,Tg-SwDI x ThCre,F,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,BDFH,High Dose CNO,1/3/2020,Testing
+230,Tg-SwDI x ThCre,F,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,BDFH,High Dose CNO,12/30/2019,Testing
+232,Tg-SwDI x ThCre,F,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,BDFH,High Dose CNO,1/3/2020,Testing
+253,Tg-SwDI x ThCre,M,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(71/99),10/2/2019,22.14,,,,,,,,ABFG,Low Dose CNO,2/27/2020,
+256,Tg-SwDI x ThCre,M,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(71/99),10/2/2019,22.14,,,,,,,,ABFG,Low Dose CNO,2/27/2020,
+259,Tg-SwDI x ThCre,M,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(210/211),10/21/2019,19.43,,,,,,,,ABFG,Low Dose CNO,1/3/2020,Testing
+263,Tg-SwDI x ThCre,M,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(210/211),10/21/2019,19.43,,,,,,,,ABFG,Low Dose CNO,NEEDS INJECTION,
+264,Tg-SwDI x ThCre,M,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(210/211),10/21/2019,19.43,,,,,,,,ABFG,Low Dose CNO,1/3/2020,Testing
+184,Tg-SwDI x ThCre,F,Tg-SwDI x (ThCre x ChR),Pos,Pos,Pos,Tg-SwDI (116),ThCre x ChR (89),7/7/2019,34.57,,,,,,,,BDFH,Low Dose CNO,12/25/2019,Testing
+236,Tg-SwDI x ThCre,F,Tg-SwDI x (ThCre x ChR),Pos,Pos,Neg,Tg-SwDI(116),Th-Cre x ChR2 (88),8/23/2019,27.86,,,,,,,,BDFH,Low Dose CNO,1/5/2019,Testing
+238,Tg-SwDI x ThCre,F,Tg-SwDI x (ThCre x ChR),Pos,Pos,Neg,Tg-SwDI(116),Th-Cre x ChR2 (88),8/23/2019,27.86,,,,,,,,BDFH,Low Dose CNO,3/2/2020,
+276,Tg-SwDI x ThCre,F,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(210/211),10/21/2019,19.43,,,,,,,,BDFH,Low Dose CNO,3/2/2020,
+265,Tg-SwDI x ThCre,F,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(71/99),10/2/2019,22.14,,,,,,,,BDFH,Low Dose CNO,NEEDS INJECTION,
+270,Tg-SwDI x ThCre,F,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(210/211),10/21/2019,19.43,,,,,,,,BDFH,Low Dose CNO,NEEDS INJECTION,
+272,Tg-SwDI x ThCre,F,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(210/211),10/21/2019,19.43,,,,,,,,BDFH,Low Dose CNO,NEEDS INJECTION,
+190,ThCre,M,ThCre,Pos,,,ThCre (58),C57 (56 or 65),7/18/2019,33,,,,,,,,BCEG,--,--,Testing
+193,ThCre,M,ThCre,Pos,,,ThCre (58),C57 (56 or 65),7/18/2019,33,,,,,,,,BCEG,--,--,Testing
+194,ThCre,M,ThCre,Pos,,,ThCre (58),C57 (56 or 65),7/18/2019,33,,,,,,,,BCEG,--,--,Testing
+196,ThCre,M,ThCre,Pos,,,ThCre (58),C57 (56 or 65),7/18/2019,33,,,,,,,,BCEG,--,--,Testing
+207,ThCre,M,ThCre,Pos,,,ThCre (3),C57 (43 or 44),7/23/2019,32.29,,,,,,,,BCEG,--,--,Testing
+202,ThCre,M,ThCre,Pos,,,ThCre (3),C57 (43 or 44),7/23/2019,32.29,,,,,,,,ABFG,--,--,Testing
+203,ThCre,M,ThCre,Pos,,,ThCre (3),C57 (43 or 44),7/23/2019,32.29,,,,,,,,ABFG,--,--,Testing
+71,ThCre,F,Th-Cre x DREADD,Pos,Neg,,Th-Cre(1),DREAD(13),3/20/2019,50.14,,,,,,,,ABFG,--,--,Testing
+99,ThCre,F,Th-Cre x Gcamp,Pos,Neg,,,,5/1/2019,44.14,,,,,,,,ABFG,--,--,Testing
+131,ThCre,F,Th-Cre x C57BL/6NJ,Pos,,,,,7/15/2019,33.43,,,,,,,,ABFG,--,--,Testing
+210,ThCre,F,ThCre,Pos,,,ThCre (58),C57 (56 or 65),7/18/2019,33,,,,,,,,ABFG,--,--,Testing
+211,ThCre,F,ThCre,Pos,,,ThCre (58),C57 (56 or 65),7/18/2019,33,,,,,,,,ABFG,--,--,Testing
+,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,
+Disceased:,,,,,,,,,,,,,,,,,,,,,
+116,,M,Tg-SwDI,POS,,,Jax,Jax,,,,,,,,,,ABFG,,,
+200,,M,ThCre,Pos,,,ThCre (3),C57 (43 or 44),7/23/2019,32.29,,,,,,,,ABFG,Low Dose CNO,,Disceased
+222,Tg-SwDI x ThCre,M,Tg-SwDI x ThCre,Pos,Pos,,Tg-SwDI(116),ThCre(71/99),8/24/2019,27.71,,,,,,,,ACDF,High Dose CNO,NEEDS INJECTION,
+183,Tg-SwDI x ThCre,F,Tg-SwDI x (ThCre x ChR),Pos,Pos,Neg,Tg-SwDI (116),ThCre x ChR (89),7/7/2019,34.57,,,,,,,,BDFH,Low Dose CNO,12/25/2019,Disceased
+262,Tg-SwDI,M,Tg-SwDI x ThCre,Pos,Neg,,Tg-SwDI(116),ThCre(210/211),10/21/2019,19.43,,,,,,,,BDFH,MAMP,--,Disceased
+283,Tg-SwDI,F,Tg-SwDI,Pos,,,Tg-SwDI(116),117,9/15/2019,24.57,,,,,,,,ACDF,MAMP,--,Disceased
