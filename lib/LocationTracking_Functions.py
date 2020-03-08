@@ -41,9 +41,9 @@ def LoadAndCrop(video_dict,stretch={'width':1,'height':1},cropmethod='none'):
     #if batch processing, set file to first file to be processed
     if 'file' not in video_dict.keys():
         video_dict['file'] = video_dict['FileNames'][0]   
-    
+        print(video_dict['file'])
     #Upoad file and check that it exists
-    video_dict['fpath'] = os.path.join(os.path.normpath(video_dict['dpath']), video_dict['file'])
+    video_dict['fpath'] = os.path.join(os.path(video_dict['dpath']), video_dict['file'])
     if os.path.isfile(video_dict['fpath']):
         print('file: {file}'.format(file=video_dict['fpath']))
         cap = cv2.VideoCapture(video_dict['fpath'])
