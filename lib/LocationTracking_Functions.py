@@ -42,8 +42,9 @@ def LoadAndCrop(video_dict,stretch={'width':1,'height':1},cropmethod='none'):
     if 'file' not in video_dict.keys():
         video_dict['file'] = video_dict['FileNames'][0]   
         print(video_dict['file'])
+    
     #Upoad file and check that it exists
-    video_dict['fpath'] = os.path.join(os.path(video_dict['dpath']), video_dict['file'])
+    video_dict['fpath'] = os.path.join(os.path.normpath(video_dict['dpath']), video_dict['file'])
     if os.path.isfile(video_dict['fpath']):
         print('file: {file}'.format(file=video_dict['fpath']))
         cap = cv2.VideoCapture(video_dict['fpath'])
@@ -426,7 +427,7 @@ def Batch_LoadFiles(video_dict):
     #Get list of video files of designated type
     if os.path.isdir(video_dict['dpath']):
         video_dict['FileNames'] = sorted(os.listdir(video_dict['dpath']))
-        video_dict['FileNames'] = fnmatch.filter(video_dict['FileNames'], ('*.' + video_dict['ftype'])) 
+        video_dict['FileNames'] = fnmatch.filter(video_dict['FileNames'], ('*.' + video_dict['ftype']))
         crop,poly_stream = None,None
         return video_dict, crop, poly_stream
     else:
@@ -447,6 +448,9 @@ def Batch_Process(video_dict,tracking_params,bin_dict,region_names,stretch,crop,
         poly = hv.Polygons(lst).opts(fill_alpha=0.1,line_dash='dashed')
     
     heatmaps = []
+    
+
+    
     for file in video_dict['FileNames']:
         
         print ('Processing File: {f}'.format(f=file))  

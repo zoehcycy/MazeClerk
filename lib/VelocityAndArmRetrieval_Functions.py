@@ -62,7 +62,7 @@ def set_scale(poly_stream):
     return cm_per_pixel
 
 
-def velocity_calculation(df,scale):
+def velocity_calculation(df,scale=None):
 
     arr = df.to_numpy()
     arr_x = arr[:, 9]
@@ -114,19 +114,20 @@ def velocity_plot(x,y,cut):
     plt.show()                                              # display and save the results
 
 
-def velocity_distribution_show(video_dict,poly_stream_1,region_names,config):
+def velocity_distribution_show(video_dict,poly_stream_1,region_names,config,scaling=None):
     
     with open((os.path.splitext(video_dict['fpath'])[0] + '_LocationOutput.csv'), 'r') as csvFile:
         df_1 = pd.read_csv(csvFile)
     
     data = df_1[['Frame','X','Y','Distance','Center','ArmA','ArmB','ArmC','ArmD','ArmE','ArmF','ArmG','ArmH',]]
     data = data*1  
-
-    cm_per_pixel = set_scale(poly_stream_1) 
-
-    time = velocity_calculation(df=df_1,scale=cm_per_pixel)['time']
-    velocity = velocity_calculation(df=df_1,scale=cm_per_pixel)['velocity']
-
+    
+    if scaling != None:
+        time = velocity_calculation(df=df_1,scale=scaling)['time']
+        velocity = velocity_calculation(df=df_1,scale=scaling)['velocity']
+    else:
+        time = velocity_calculation(df=df_1,scale=None)['time']
+        velocity = velocity_calculation(df=df_1,scale=None)['velocity']
     df_v = pd.DataFrame({'Frame':data['Frame'],'Velocity':velocity,'Arm':np.zeros(len(velocity))})
 
     for a in region_names:
@@ -157,7 +158,6 @@ def velocity_distribution_show(video_dict,poly_stream_1,region_names,config):
     s = "mean:" + str('{0:.2f}'.format(mean)) + "cm/s"
     plt.text(x=0, y=max(velocity), s=s, fontweight='bold')
     plt.savefig(video_dict['fpath'][0:-4] + '_ArmRetrieve.png')
-    plt.show()
 
 
 
@@ -297,3 +297,5 @@ def arm_retrieve_errors(video_dict,baited):
         print("The number of working memory errors was " + str(workingMemErrors))
     else:
         print("Error! Check the value you entered for 'baited'!")
+    
+    return referenceMemErrors,workingMemErrors
