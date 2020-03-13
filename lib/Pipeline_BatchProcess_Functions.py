@@ -9,7 +9,7 @@ from email.message import EmailMessage
 
 ########################################################################################
 
-def Batch_Process(video_dict,tracking_params,bin_dict,region_names,stretch,crop,poly_stream,poly_stream_1,scaling=None):
+def Batch_Process(video_dict,tracking_params,bin_dict,region_names,stretch,crop,poly_stream,poly_stream_1,scale=None):
     
     #get polygon
     if poly_stream != None:
@@ -46,7 +46,7 @@ def Batch_Process(video_dict,tracking_params,bin_dict,region_names,stretch,crop,
             config = va.specify_configuration(baited)
             
             # Scatter plot velocity-time
-            va.velocity_distribution_show(video_dict,poly_stream_1,region_names,config,scaling)
+            va.velocity_distribution_show(video_dict,poly_stream_1,region_names,config,scale)
             
             referenceMemError,workingMemError = va.arm_retrieve_errors(video_dict,baited)
             

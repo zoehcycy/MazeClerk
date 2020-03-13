@@ -114,7 +114,7 @@ def velocity_plot(x,y,cut):
     plt.show()                                              # display and save the results
 
 
-def velocity_distribution_show(video_dict,poly_stream_1,region_names,config,scaling=None):
+def velocity_distribution_show(video_dict,poly_stream_1,region_names,config,scale=None):
     
     with open((os.path.splitext(video_dict['fpath'])[0] + '_LocationOutput.csv'), 'r') as csvFile:
         df_1 = pd.read_csv(csvFile)
@@ -122,9 +122,9 @@ def velocity_distribution_show(video_dict,poly_stream_1,region_names,config,scal
     data = df_1[['Frame','X','Y','Distance','Center','ArmA','ArmB','ArmC','ArmD','ArmE','ArmF','ArmG','ArmH',]]
     data = data*1  
     
-    if scaling != None:
-        time = velocity_calculation(df=df_1,scale=scaling)['time']
-        velocity = velocity_calculation(df=df_1,scale=scaling)['velocity']
+    if scale != None:
+        time = velocity_calculation(df=df_1,scale=scale)['time']
+        velocity = velocity_calculation(df=df_1,scale=scale)['velocity']
     else:
         time = velocity_calculation(df=df_1,scale=None)['time']
         velocity = velocity_calculation(df=df_1,scale=None)['velocity']
