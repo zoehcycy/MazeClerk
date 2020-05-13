@@ -124,7 +124,7 @@ class GUI(object):
 
         def on_key_press(event):
             print("you pressed {}".format(event.key))
-            key_press_handler(event, canvas, toolbar)
+            #key_press_handler(event, canvas, toolbar)
 
         canvas.mpl_connect("key_press_event", on_key_press)
 
@@ -337,3 +337,12 @@ class GUI(object):
 
         self.button_close = Button(self.my_gui, text='Close', width=25, command=self.close_button_pushed)
         self.button_close.place(x=410, y=begin)
+
+
+
+
+
+
+############################### RUN GUI ################################
+myGUI = GUI(r'.\data')
+myGUI.run()
