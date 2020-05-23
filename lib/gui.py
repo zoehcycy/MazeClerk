@@ -41,39 +41,27 @@ class GUI(object):
         return self.my_gui.mainloop()
 
     def clear_button_pushed(self):
-        self.entry_0.delete(0, END)
-        self.entry_2.delete(0, END)
-        self.entry_3.delete(0, END)
-        self.entry_4.delete(0, END)
-        self.entry_5.delete(0, END)
-        self.entry_6.delete(0, END)
-        self.entry_7.delete(0, END)
+        self.entry_id.delete(0, END)
+        self.entry_weight.delete(0, END)
+        self.entry_rme.delete(0, END)
+        self.entry_wme.delete(0, END)
+        self.entry_notes.delete(0, END)
 
     def get_input(self, key: str):
 
         normal_text_field = {
-            'date', 'mouse_id', 'filename',
-            'baited_arms', 'baited_arms_retrieved',
-            'mamp_dose_administered',
-            'cno_dose_administered'
+            'date', 'mouse_id','baited_arms','baited_arms_retrieved','other_notes',
         }
+
         required_field = {
-            'weight',
-            'start_time', 'end_time',
-            'reference_memory_errors',
-            'working_memory_errors',
+            'weight','reference_memory_errors','working_memory_errors',
         }
 
         int_field = {
             'weight',
-            'start_time',
-            'start_time',
-            'end_time',
             'baited_arms_retrieved',
             'reference_memory_errors',
             'working_memory_errors',
-            'mamp_dose_administered',
-            'cno_dose_administered',
         }
 
         ret = None
@@ -157,23 +145,17 @@ class GUI(object):
         if m_ID in m_IDs:
             print('------------Successfully Found Mouse ' + m_ID)
 
-            # attributes = ['Unnamed:0','Date','Weight','Start_Time','End_Time','Baited Arms',\
-            # 'Baited Arms Retrieved','Reference Memory Errors','Working Memory Errors',\
-            # 'Other Notes','MAMP Dose Administered','CNO Dose Administered']
-            attributes = []
-            for col in list(old_file[m_ID].columns):
-                attributes.append(col)
+            attributes = ['Date','Weight','Baited Arms','Baited Arms Retrieved',\
+                'Reference Memory Errors','Working Memory Errors','Other Notes']
 
             new_dict = {}
 
-            for attribute in attributes[1:]:
+            for attribute in attributes[:]:
                 # append data using callbacks
                 new_dict[attribute] = list(old_file[m_ID][attribute])
                 n = attribute.lower()
                 name = '_'.join(n.split())
                 c = self.get_input(name)
-                # c = 'get_' + '_'.join(n.split()) + '()'
-                # new_dict[attribute].append(eval(c)
                 new_dict[attribute].append(c)
 
             new_df = pd.DataFrame(new_dict)  # new_dict contains updated data of this animal
@@ -201,7 +183,7 @@ class GUI(object):
 
     def build_widgets(self):
 
-        frame = Frame(master=self.my_gui, width=600, height=600)
+        frame = Frame(master=self.my_gui, width=600, height=400)
         frame.pack()
         begin = 50
         gap = 40
@@ -209,123 +191,78 @@ class GUI(object):
         title = Label(self.my_gui, font='bold', text='Enter Mouse Data.Save mouse data into mat structure.')
         title.place(x=10, y=10)
 
-        self.label_0 = Label(self.my_gui, text='Mouse ID (numbers only)*')
-        self.label_0.place(x=10, y=begin)
-        self.entry_0 = Entry(self.my_gui, bd=2)
-        self.entry_0.place(x=wid, y=begin)
-        self.data_entries['mouse_id'] = self.entry_0
-        self.entries.append(self.entry_0)
+        self.label_id = Label(self.my_gui, text='Mouse ID (numbers only)*')
+        self.label_id.place(x=10, y=begin)
+        self.entry_id = Entry(self.my_gui, bd=2)
+        self.entry_id.place(x=wid, y=begin)
+        self.data_entries['mouse_id'] = self.entry_id
+        self.entries.append(self.entry_id)
 
         begin = begin + gap
 
-        self.label_1 = Label(self.my_gui, text='Date*')
-        self.label_1.place(x=10, y=begin)
-        self.entry_1 = Entry(self.my_gui, bd=2)
+        self.label_date = Label(self.my_gui, text='Date*')
+        self.label_date.place(x=10, y=begin)
+        self.entry_date = Entry(self.my_gui, bd=2)
         t = datetime.now()
-        self.entry_1.insert(INSERT, '-'.join([t.strftime('%d'), t.strftime('%b'), t.strftime('%y')]))
-        self.entry_1.place(x=wid, y=begin)
-        self.data_entries['date'] = self.entry_1
+        self.entry_date.insert(INSERT, '-'.join([t.strftime('%d'), t.strftime('%b'), t.strftime('%y')]))
+        self.entry_date.place(x=wid, y=begin)
+        self.data_entries['date'] = self.entry_date
 
         begin = begin + gap
 
-        self.label_2 = Label(self.my_gui, text='Weight*')
-        self.label_2.place(x=10, y=begin)
-        self.entry_2 = Entry(self.my_gui, bd=2)
-        self.entry_2.place(x=wid, y=begin)
-        self.data_entries['weight'] = self.entry_2
-        self.entries.append(self.entry_2)
+        self.label_weight = Label(self.my_gui, text='Weight*')
+        self.label_weight.place(x=10, y=begin)
+        self.entry_weight = Entry(self.my_gui, bd=2)
+        self.entry_weight.place(x=wid, y=begin)
+        self.data_entries['weight'] = self.entry_weight
+        self.entries.append(self.entry_weight)
 
         begin = begin + gap
 
-        self.label_3 = Label(self.my_gui, text='Start Time*')
-        self.label_3.place(x=10, y=begin)
-        self.entry_3 = Entry(self.my_gui, bd=2)
-        self.entry_3.place(x=wid, y=begin)
-        self.data_entries['start_time'] = self.entry_3
-        self.entries.append(self.entry_3)
-
-        begin = begin + gap
-
-        self.label_4 = Label(self.my_gui, text='End Time*')
-        self.label_4.place(x=10, y=begin)
-        self.entry_4 = Entry(self.my_gui, bd=2)
-        self.entry_4.place(x=wid, y=begin)
-        self.data_entries['end_time'] = self.entry_4
-        self.entries.append(self.entry_4)
-
-        begin = begin + gap
-
-        self.label_5 = Label(self.my_gui, text='Baited Arms*')
-        self.label_5.place(x=10, y=begin)
+        self.label_baited_arms = Label(self.my_gui, text='Baited Arms*')
+        self.label_baited_arms.place(x=10, y=begin)
         self.baited_arms = StringVar()
-        self.combobox_0 = ttk.Combobox(self.my_gui, textvariable=self.baited_arms)
-        self.combobox_0.place(x=wid, y=begin)
-        self.combobox_0['value'] = ('A,C,D,F', 'B,D,F,H', 'B,C,E,G', 'A,B,F,G')  # values for selection
-        self.combobox_0.current(0)  # default value
-        self.data_entries['baited_arms'] = self.combobox_0
+        self.combobox_baited_arms = ttk.Combobox(self.my_gui, textvariable=self.baited_arms)
+        self.combobox_baited_arms.place(x=wid, y=begin)
+        self.combobox_baited_arms['value'] = ('A,C,D,F', 'B,D,F,H', 'B,C,E,G', 'A,B,F,G')  # values for selection
+        self.combobox_baited_arms.current(0)  # default value
+        self.data_entries['baited_arms'] = self.combobox_baited_arms
 
         begin = begin + gap
 
-        self.label_6 = Label(self.my_gui, text='Baited Arms Retrieved*')
-        self.label_6.place(x=10, y=begin)
+        self.label_retrieved_arms = Label(self.my_gui, text='Baited Arms Retrieved*')
+        self.label_retrieved_arms.place(x=10, y=begin)
         self.baited_arms_retrieved = StringVar()
-        self.combobox_1 = ttk.Combobox(self.my_gui,
+        self.combobox_retrieved_arms = ttk.Combobox(self.my_gui,
                                        textvariable=self.baited_arms_retrieved)
-        self.combobox_1.place(x=wid, y=begin)
-        self.combobox_1['value'] = (0, 1, 2, 3, 4)  # values for selection
-        self.combobox_1.current(0)  # default value
-        self.data_entries['baited_arms_retrieved'] = self.combobox_1
+        self.combobox_retrieved_arms.place(x=wid, y=begin)
+        self.combobox_retrieved_arms['value'] = (0, 1, 2, 3, 4)  # values for selection
+        self.combobox_retrieved_arms.current(0)  # default value
+        self.data_entries['baited_arms_retrieved'] = self.combobox_retrieved_arms
 
         begin = begin + gap
 
-        self.label_7 = Label(self.my_gui, text='Reference Memory Errors*')
-        self.label_7.place(x=10, y=begin)
-        self.entry_5 = Entry(self.my_gui, bd=2)
-        self.entry_5.place(x=wid, y=begin)
-        self.data_entries['reference_memory_errors'] = self.entry_5
+        self.label_rme = Label(self.my_gui, text='Reference Memory Errors*')
+        self.label_rme.place(x=10, y=begin)
+        self.entry_rme = Entry(self.my_gui, bd=2)
+        self.entry_rme.place(x=wid, y=begin)
+        self.data_entries['reference_memory_errors'] = self.entry_rme
 
         begin = begin + gap
 
-        self.label_8 = Label(self.my_gui, text='Working Memory Errors*')
-        self.label_8.place(x=10, y=begin)
-        self.entry_6 = Entry(self.my_gui, bd=2)
-        self.entry_6.place(x=wid, y=begin)
-        self.data_entries['working_memory_errors'] = self.entry_5
+        self.label_wme = Label(self.my_gui, text='Working Memory Errors*')
+        self.label_wme.place(x=10, y=begin)
+        self.entry_wme = Entry(self.my_gui, bd=2)
+        self.entry_wme.place(x=wid, y=begin)
+        self.data_entries['working_memory_errors'] = self.entry_wme
 
         begin = begin + gap
 
-        self.label_9 = Label(self.my_gui, text='Other Notes')
-        self.label_9.place(x=10, y=begin)
-        self.entry_7 = Entry(self.my_gui, bd=2)
-        self.entry_7.place(x=wid, y=begin)
-        self.data_entries['other_notes'] = self.entry_5
-
-        begin = begin + gap
-
-        self.label_10 = Label(self.my_gui, text='Filename')
-        self.label_10.place(x=10, y=begin)
-        self.entry_8 = Entry(self.my_gui, bd=2)
-        self.entry_8.insert(END, 'RAM_Experimental_Data')
-        self.entry_8.place(x=wid, y=begin)
-        self.data_entries['filename'] = self.entry_5
-
-        begin = begin + gap
-
-        self.label_9 = Label(self.my_gui, text='MAMP Dose Administered')
-        self.label_9.place(x=10, y=begin)
-        self.entry_9 = Entry(self.my_gui, bd=2)
-        self.entry_9.insert(INSERT, 0)
-        self.entry_9.place(x=wid, y=begin)
-        self.data_entries['mamp_dose_administered'] = self.entry_9
-
-        begin = begin + gap
-
-        self.label_9 = Label(self.my_gui, text='CNO Dose Administered')
-        self.label_9.place(x=10, y=begin)
-        self.entry_10 = Entry(self.my_gui, bd=2)
-        self.entry_10.insert(INSERT, 0)
-        self.entry_10.place(x=wid, y=begin)
-        self.data_entries['cno_dose_administered'] = self.entry_10
+        self.label_notes = Label(self.my_gui, text='Other Notes')
+        self.label_notes.place(x=10, y=begin)
+        self.entry_notes = Entry(self.my_gui, bd=2)
+        self.entry_notes.place(x=wid, y=begin)
+        self.data_entries['other_notes'] = self.entry_notes
 
         begin = begin + gap
 
@@ -342,7 +279,6 @@ class GUI(object):
 
 
 
-
 ############################### RUN GUI ################################
-myGUI = GUI(r'.\data')
+myGUI = GUI(r'D:\GitHub\MazeClerk\data')
 myGUI.run()
