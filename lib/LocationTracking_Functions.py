@@ -135,7 +135,7 @@ def Reference(video_dict,crop,num_frames=100):
     else:
         raise FileNotFoundError('File not found. Check that directory and file names are correct.')
 
-    #Upoad file
+    #Upload file
     cap.set(1,0)#first index references frame property, second specifies next frame to grab
     
     #Get video dimensions with any cropping applied
@@ -427,6 +427,15 @@ def Batch_LoadFiles(video_dict):
     #Get list of video files of designated type
     if os.path.isdir(video_dict['dpath']):
         video_dict['FileNames'] = sorted(os.listdir(video_dict['dpath']))
+        if video_dict['FileNames'][0][-8:-5] != 'Box': # if the dirst one in this list is not EmptyBox.avi
+            print(video_dict)
+            print(video_dict['FileNames'])
+            for i, video in enumerate(video_dict['FileNames']):
+                if video[-8:-5] == 'Box':
+                    ref = video
+                    video_dict['FileNames'][i] = video_dict['FileNames'][0]
+                    video_dict['FileNames'][0] = ref
+            
         video_dict['FileNames'] = fnmatch.filter(video_dict['FileNames'], ('*.' + video_dict['ftype']))
         crop,poly_stream = None,None
         return video_dict, crop, poly_stream

@@ -4,8 +4,6 @@ import pandas as pd
 import holoviews as hv
 import lib.LocationTracking_Functions as lt
 import lib.VelocityAndArmRetrieval_Functions as va
-import smtplib
-from email.message import EmailMessage
 
 ########################################################################################
 
@@ -21,14 +19,11 @@ def Batch_Process(video_dict,tracking_params,bin_dict,region_names,stretch,crop,
         poly = hv.Polygons(lst).opts(fill_alpha=0.1,line_dash='dashed')
     
     heatmaps = []
-    
-    # exclude 'EmptyBox' video from processing list
-    for i in range(len(video_dict['FileNames'])):
-        if video_dict['FileNames'][i][-14:-5] == '_EmptyBox':
-            del video_dict['FileNames'][i]
-    
+   
     # Batch process
     for file in video_dict['FileNames']:
+        if file[-8:-5] == 'Box': # exclude 'EmptyBox' video from processing list
+            continue
         try:
             video_dict['file'] = file #used both to set the path and to store filenames when saving
             video_dict['fpath'] = os.path.join(os.path.normpath(video_dict['dpath']), file)
@@ -71,10 +66,7 @@ def Batch_Process(video_dict,tracking_params,bin_dict,region_names,stretch,crop,
             print('--------------------------')
 
         except:
-            # send an alerting email to zoehcycy@gmail.com
-            # credential is stored on local device for safety concerns
-            error_msg = '--------' + file + '--------\n'
-            send_alerting_email()
+            print('--------Error:' + file + '--------\n')
             pass
         
     #Write summary data to csv file
@@ -83,27 +75,3 @@ def Batch_Process(video_dict,tracking_params,bin_dict,region_names,stretch,crop,
     
     layout = hv.Layout(heatmaps)
     return layout
-
-########################################################################################
-
-def send_alerting_email():
-
-    smtpserver = 'smtp.163.com'
-    user = 'NEC_lab@163.com'
-    sender = 'NEC_lab<NEC_lab@163.com>' 
-    receiver = "zoehcycy@gmail.com;NEC_lab@163.com"
-    with open(r'D:\ZOE-STORE-LAPTOP\NEC_lab_163_credential.txt', 'r') as file:
-        credential = file.read().replace('\n', '')
-        msg = EmailMessage()
-        msg.set_content(file.read())
-        
-    msg['Subject'] = 'NEC_Lab_Unhandled_Exception'
-    msg['From'] = 'NEC_lab<NEC_lab@163.com>'  
-    msg['To'] = "zoehcycy@gmail.com;NEC_lab@163.com"
-    
-    smtp = smtplib.SMTP()
-    smtp.connect(smtpserver)
-    smtp.login(user, credential)
-    smtp.send_message(msg)
-
-    smtp.quit()

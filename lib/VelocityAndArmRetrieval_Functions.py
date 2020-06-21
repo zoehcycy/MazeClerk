@@ -13,7 +13,7 @@
 ########################################################################################
 
 import os
-import LocationTracking_Functions as lt
+import lib.LocationTracking_Functions as lt
 import pandas as pd
 import numpy as np
 import math
@@ -63,7 +63,7 @@ def set_scale(poly_stream):
 
 
 def velocity_calculation(df,scale=None):
-
+    
     arr = df.to_numpy()
     arr_x = arr[:, 9]
     arr_y = arr[:, 10]
@@ -76,7 +76,10 @@ def velocity_calculation(df,scale=None):
     for i in range(0, len(arr_x) - 1):
         dx = arr_x[i+1] - arr_x[i]
         dy = arr_y[i+1] - arr_y[i]
-        movement = math.sqrt(dx * dx + dy * dy) * scale
+        if scale:
+            movement = math.sqrt(dx * dx + dy * dy) * scale
+        else:
+            movement = math.sqrt(dx * dx + dy * dy)
         velocity.append(movement / dt)
 
     # add a value to keep len(velocity) consistent with df
