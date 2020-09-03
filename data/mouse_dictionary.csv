@@ -1,52 +1,52 @@
-Mouse ID,Genotype,Gender,DOB,Maze Configuration,Pharmacological Group,Experimental Group,Experimental Status
-71,ThCre,F,3/20/2019,ABFG,--,Healthy Control,Testing
-99,ThCre,F,5/1/2019,ABFG,--,Healthy Control,Testing
-131,ThCre,F,7/15/2019,ABFG,--,Healthy Control,Testing
-170,Tg-SwDI,M,8/2/2019,ABFG,--,Disease Control,Testing
-171,Tg-SwDI,M,8/2/2019,ABFG,--,Disease Control,Testing
-172,Tg-SwDI,F,8/2/2019,BCEG,--,Disease Control,Testing
-173,Tg-SwDI,F,8/2/2019,BCEG,--,Disease Control,Testing
-174,Tg-SwDI,F,8/2/2019,BCEG,--,Disease Control,Testing
-175,Tg-SwDI,F,8/2/2019,BCEG,--,Disease Control,Testing
-177,Tg-SwDI x ThCre,M,7/7/2019,ACDF,High Dose CNO,High Dose CNO,Testing
-178,Tg-SwDI x ThCre,M,7/7/2019,ACDF,High Dose CNO,High Dose CNO,Testing
-181,Tg-SwDI x ThCre,F,7/7/2019,BDFH,High Dose CNO,High Dose CNO,Testing
-182,Tg-SwDI x ThCre,F,7/7/2019,BDFH,High Dose CNO,High Dose CNO,Testing
-184,Tg-SwDI x ThCre,F,7/7/2019,BDFH,Low Dose CNO,Low Dose CNO,Testing
-190,ThCre,M,7/18/2019,BCEG,--,Healthy Control,Testing
-193,ThCre,M,7/18/2019,BCEG,--,Healthy Control,Testing
-194,ThCre,M,7/18/2019,BCEG,--,Healthy Control,Testing
-196,ThCre,M,7/18/2019,BCEG,--,Healthy Control,Testing
-202,ThCre,M,7/23/2019,ABFG,--,Healthy Control,Testing
-203,ThCre,M,7/23/2019,ABFG,--,Healthy Control,Testing
-207,ThCre,M,7/23/2019,BCEG,--,Healthy Control,Testing
-210,ThCre,F,7/18/2019,ABFG,--,Healthy Control,Testing
-211,ThCre,F,7/18/2019,ABFG,--,Healthy Control,Testing
-221,Tg-SwDI x ThCre,M,8/24/2019,ACDF,High Dose CNO,Genetic Control,Testing
-224,Tg-SwDI,M,8/24/2019,ABFG,--,Disease Control,Testing
-225,Tg-SwDI,M,8/24/2019,ABFG,--,Disease Control,Testing
-228,Tg-SwDI x ThCre,F,8/24/2019,BDFH,High Dose CNO,High Dose CNO,Testing
-230,Tg-SwDI x ThCre,F,8/24/2019,BDFH,High Dose CNO,High Dose CNO,Testing
-231,Tg-SwDI,F,8/24/2019,BCEG,--,Disease Control,Testing
-232,Tg-SwDI x ThCre,F,8/24/2019,BDFH,High Dose CNO,High Dose CNO,Testing
-233,Tg-SwDI,M,8/24/2019,ABFG,--,Disease Control,Testing
-234,Tg-SwDI x ThCre,M,8/24/2019,ACDF,High Dose CNO,Genetic Control,Testing
-236,Tg-SwDI x ThCre,F,8/23/2019,BDFH,Low Dose CNO,Low Dose CNO,Testing
-238,Tg-SwDI x ThCre,F,8/23/2019,BDFH,Low Dose CNO,Genetic Control,Testing
-253,Tg-SwDI x ThCre,M,10/2/2019,ABFG,Low Dose CNO,Genetic Control,Testing
-254,Tg-SwDI,M,10/2/2019,BDFH,MAMP,Disease Control,Testing
-255,Tg-SwDI,M,10/2/2019,BDFH,MAMP,Disease Control,Testing
-256,Tg-SwDI x ThCre,M,10/2/2019,ABFG,Low Dose CNO,Genetic Control,Testing
-259,Tg-SwDI x ThCre,M,10/21/2019,ABFG,Low Dose CNO,Low Dose CNO,Testing
-260,Tg-SwDI,M,10/21/2019,BDFH,MAMP,Disease Control,Testing
-261,Tg-SwDI,M,10/21/2019,BDFH,MAMP,Disease Control,Testing
-263,Tg-SwDI x ThCre,M,10/21/2019,ABFG,Low Dose CNO,Genetic Control,
-264,Tg-SwDI x ThCre,M,10/21/2019,ABFG,Low Dose CNO,Low Dose CNO,Testing
-265,Tg-SwDI x ThCre,F,10/2/2019,BDFH,Low Dose CNO,Genetic Control,
-270,Tg-SwDI x ThCre,F,10/21/2019,BDFH,Low Dose CNO,Genetic Control,
-272,Tg-SwDI x ThCre,F,10/21/2019,BDFH,Low Dose CNO,Genetic Control,
-276,Tg-SwDI x ThCre,F,10/21/2019,BDFH,Low Dose CNO,Genetic Control,Testing
-282,Tg-SwDI,F,10/29/2019,ACDF,MAMP,Disease Control,Testing
-284,Tg-SwDI,F,9/15/2019,ACDF,MAMP,Disease Control,Testing
-285,Tg-SwDI,F,9/15/2019,ACDF,MAMP,Disease Control,Testing
-286,Tg-SwDI,F,9/15/2019,ACDF,MAMP,Disease Control,Testing
+Mouse ID,Genotype,Gender,DOB,Age (wks),Maze Configuration,Pharmacological Group,Experimental Group,Virus Implantation,Experimental Status
+71,ThCre,F,3/20/2019,50.14,ABFG,--,Healthy Control,--,Testing
+99,ThCre,F,5/1/2019,44.14,ABFG,--,Healthy Control,--,Testing
+131,ThCre,F,7/15/2019,33.43,ABFG,--,Healthy Control,--,Testing
+170,Tg-SwDI,M,8/2/2019,30.86,ABFG,--,Disease Control,--,Testing
+171,Tg-SwDI,M,8/2/2019,30.86,ABFG,--,Disease Control,--,Testing
+172,Tg-SwDI,F,8/2/2019,30.86,BCEG,--,Disease Control,--,Testing
+173,Tg-SwDI,F,8/2/2019,30.86,BCEG,--,Disease Control,--,Testing
+174,Tg-SwDI,F,8/2/2019,30.86,BCEG,--,Disease Control,--,Testing
+175,Tg-SwDI,F,8/2/2019,30.86,BCEG,--,Disease Control,--,Testing
+177,Tg-SwDI x ThCre,M,7/7/2019,34.57,ACDF,High Dose CNO,High Dose CNO,1/14/2020,Testing
+178,Tg-SwDI x ThCre,M,7/7/2019,34.57,ACDF,High Dose CNO,High Dose CNO,1/14/2020,Testing
+181,Tg-SwDI x ThCre,F,7/7/2019,34.57,BDFH,High Dose CNO,High Dose CNO,1/3/2020,Testing
+182,Tg-SwDI x ThCre,F,7/7/2019,34.57,BDFH,High Dose CNO,High Dose CNO,12/30/2019,Testing
+184,Tg-SwDI x ThCre,F,7/7/2019,34.57,BDFH,Low Dose CNO,Low Dose CNO,12/25/2019,Testing
+190,ThCre,M,7/18/2019,33,BCEG,--,Healthy Control,--,Testing
+193,ThCre,M,7/18/2019,33,BCEG,--,Healthy Control,--,Diceased
+194,ThCre,M,7/18/2019,33,BCEG,--,Healthy Control,--,Diceased
+196,ThCre,M,7/18/2019,33,BCEG,--,Healthy Control,--,Testing
+202,ThCre,M,7/23/2019,32.29,ABFG,--,Healthy Control,--,Testing
+203,ThCre,M,7/23/2019,32.29,ABFG,--,Healthy Control,--,Testing
+207,ThCre,M,7/23/2019,32.29,BCEG,--,Healthy Control,--,Testing
+210,ThCre,F,7/18/2019,33,ABFG,--,Healthy Control,--,Testing
+211,ThCre,F,7/18/2019,33,ABFG,--,Healthy Control,--,Testing
+221,Tg-SwDI x ThCre,M,8/24/2019,27.71,ACDF,High Dose CNO,Genetic Control,2/22/2020,Testing
+224,Tg-SwDI,M,8/24/2019,27.71,ABFG,--,Disease Control,--,Diceased
+225,Tg-SwDI,M,8/24/2019,27.71,ABFG,--,Disease Control,--,Testing
+228,Tg-SwDI x ThCre,F,8/24/2019,27.71,BDFH,High Dose CNO,High Dose CNO,1/3/2020,Testing
+230,Tg-SwDI x ThCre,F,8/24/2019,27.71,BDFH,High Dose CNO,High Dose CNO,12/30/2019,Testing
+231,Tg-SwDI,F,8/24/2019,27.71,BCEG,--,Disease Control,--,Testing
+232,Tg-SwDI x ThCre,F,8/24/2019,27.71,BDFH,High Dose CNO,High Dose CNO,1/3/2020,Testing
+233,Tg-SwDI,M,8/24/2019,27.71,ABFG,--,Disease Control,--,Testing
+234,Tg-SwDI x ThCre,M,8/24/2019,27.71,ACDF,High Dose CNO,Genetic Control,2/22/2020,Testing
+236,Tg-SwDI x ThCre,F,8/23/2019,27.86,BDFH,Low Dose CNO,Low Dose CNO,1/5/2019,Testing
+238,Tg-SwDI x ThCre,F,8/23/2019,27.86,BDFH,Low Dose CNO,Genetic Control,3/2/2020,Testing
+253,Tg-SwDI x ThCre,M,10/2/2019,22.14,ABFG,Low Dose CNO,Genetic Control,2/27/2020,Diceased
+254,Tg-SwDI,M,10/2/2019,22.14,BDFH,MAMP,Disease Control,--,Testing
+255,Tg-SwDI,M,10/2/2019,22.14,BDFH,MAMP,Disease Control,--,Testing
+256,Tg-SwDI x ThCre,M,10/2/2019,22.14,ABFG,Low Dose CNO,Genetic Control,2/27/2020,Testing
+259,Tg-SwDI x ThCre,M,10/21/2019,19.43,ABFG,Low Dose CNO,Low Dose CNO,1/3/2020,Testing
+260,Tg-SwDI,M,10/21/2019,19.43,BDFH,MAMP,Disease Control,--,Testing
+261,Tg-SwDI,M,10/21/2019,19.43,BDFH,MAMP,Disease Control,--,Testing
+263,Tg-SwDI x ThCre,M,10/21/2019,19.43,ABFG,Low Dose CNO,Genetic Control,NEEDS INJECTION,Testing
+264,Tg-SwDI x ThCre,M,10/21/2019,19.43,ABFG,Low Dose CNO,Low Dose CNO,1/3/2020,Diceased
+265,Tg-SwDI x ThCre,F,10/2/2019,22.14,BDFH,Low Dose CNO,Genetic Control,NEEDS INJECTION,Not ready
+270,Tg-SwDI x ThCre,F,10/21/2019,19.43,BDFH,Low Dose CNO,Genetic Control,NEEDS INJECTION,Not ready
+272,Tg-SwDI x ThCre,F,10/21/2019,19.43,BDFH,Low Dose CNO,Genetic Control,NEEDS INJECTION,Not ready
+276,Tg-SwDI x ThCre,F,10/21/2019,19.43,BDFH,Low Dose CNO,Genetic Control,3/2/2020,Testing
+282,Tg-SwDI,F,10/29/2019,18.29,ACDF,MAMP,Disease Control,--,Testing
+284,Tg-SwDI,F,9/15/2019,24.57,ACDF,MAMP,Disease Control,--,Testing
+285,Tg-SwDI,F,9/15/2019,24.57,ACDF,MAMP,Disease Control,--,Testing
+286,Tg-SwDI,F,9/15/2019,24.57,ACDF,MAMP,Disease Control,--,Testing

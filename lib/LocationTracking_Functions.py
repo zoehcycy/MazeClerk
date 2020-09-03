@@ -445,56 +445,56 @@ def Batch_LoadFiles(video_dict):
 
 ######################################################################################## 
 
-def Batch_Process(video_dict,tracking_params,bin_dict,region_names,stretch,crop,poly_stream=None):
+# def Batch_Process(video_dict,tracking_params,bin_dict,region_names,stretch,crop,poly_stream=None):
     
-    #get polygon
-    if poly_stream != None:
-        lst = []
-        for poly in range(len(poly_stream.data['xs'])):
-            x = np.array(poly_stream.data['xs'][poly]) #x coordinates
-            y = np.array(poly_stream.data['ys'][poly]) #y coordinates
-            lst.append( [ (x[vert],y[vert]) for vert in range(len(x)) ] )
-        poly = hv.Polygons(lst).opts(fill_alpha=0.1,line_dash='dashed')
+#     #get polygon
+#     if poly_stream != None:
+#         lst = []
+#         for poly in range(len(poly_stream.data['xs'])):
+#             x = np.array(poly_stream.data['xs'][poly]) #x coordinates
+#             y = np.array(poly_stream.data['ys'][poly]) #y coordinates
+#             lst.append( [ (x[vert],y[vert]) for vert in range(len(x)) ] )
+#         poly = hv.Polygons(lst).opts(fill_alpha=0.1,line_dash='dashed')
     
-    heatmaps = []
+#     heatmaps = []
     
 
     
-    for file in video_dict['FileNames']:
+#     for file in video_dict['FileNames']:
         
-        print ('Processing File: {f}'.format(f=file))  
-        video_dict['file'] = file #used both to set the path and to store filenames when saving
-        video_dict['fpath'] = os.path.join(os.path.normpath(video_dict['dpath']), file)
+#         print ('Processing File: {f}'.format(f=file))  
+#         video_dict['file'] = file #used both to set the path and to store filenames when saving
+#         video_dict['fpath'] = os.path.join(os.path.normpath(video_dict['dpath']), file)
         
-        reference = Reference(video_dict,crop,num_frames=100) 
-        location = TrackLocation(video_dict,tracking_params,reference,crop)
-        if region_names!=None:
-            location = ROI_Location(reference,poly_stream,region_names,location)
-        location.to_csv(os.path.splitext(video_dict['fpath'])[0] + '_LocationOutput.csv')
-        file_summary = Summarize_Location(location, video_dict, bin_dict=bin_dict, region_names=region_names)
+#         reference = Reference(video_dict,crop,num_frames=100) 
+#         location = TrackLocation(video_dict,tracking_params,reference,crop)
+#         if region_names!=None:
+#             location = ROI_Location(reference,poly_stream,region_names,location)
+#         location.to_csv(os.path.splitext(video_dict['fpath'])[0] + '_LocationOutput.csv')
+#         file_summary = Summarize_Location(location, video_dict, bin_dict=bin_dict, region_names=region_names)
                
-        try: #Add summary info for individual file to larger summary of all files
-            summary_all = pd.concat([summary_all,file_summary])
-        except NameError: #to be done for first file in list, before summary_all is created
-            summary_all = file_summary
+#         try: #Add summary info for individual file to larger summary of all files
+#             summary_all = pd.concat([summary_all,file_summary])
+#         except NameError: #to be done for first file in list, before summary_all is created
+#             summary_all = file_summary
         
-        #Plot Heat Map
-        image = hv.Image((np.arange(reference.shape[1]), np.arange(reference.shape[0]), reference)).opts(
-        width=int(reference.shape[1]*stretch['width']),
-        height=int(reference.shape[0]*stretch['height']),
-        invert_yaxis=True,cmap='gray',toolbar='below',
-        title=file+": Motion Trace")
-        points = hv.Scatter(np.array([location['X'],location['Y']]).T).opts(color='navy',alpha=.2)
-        heatmaps.append(image*poly*points) if poly_stream!=None else heatmaps.append(image*points)
+#         #Plot Heat Map
+#         image = hv.Image((np.arange(reference.shape[1]), np.arange(reference.shape[0]), reference)).opts(
+#         width=int(reference.shape[1]*stretch['width']),
+#         height=int(reference.shape[0]*stretch['height']),
+#         invert_yaxis=True,cmap='gray',toolbar='below',
+#         title=file+": Motion Trace")
+#         points = hv.Scatter(np.array([location['X'],location['Y']]).T).opts(color='navy',alpha=.2)
+#         heatmaps.append(image*poly*points) if poly_stream!=None else heatmaps.append(image*points)
 
-    #Write summary data to csv file
-    sum_pathout = os.path.join(os.path.normpath(video_dict['dpath']), 'BatchSummary.csv')
-    summary_all.to_csv(sum_pathout)
+#     #Write summary data to csv file
+#     sum_pathout = os.path.join(os.path.normpath(video_dict['dpath']), 'BatchSummary.csv')
+#     summary_all.to_csv(sum_pathout)
     
-    layout = hv.Layout(heatmaps)
-    return layout
+#     layout = hv.Layout(heatmaps)
+#     return layout
 
-########################################################################################        
+# ########################################################################################        
 
 def PlayVideo(video_dict,display_dict,crop,location):
 
